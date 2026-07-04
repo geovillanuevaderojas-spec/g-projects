@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>G Weather</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sky-layer" id="skyLayer"></div>
+
+<div class="app">
+  <div class="eyebrow">Ang buhay ay weather weather lang</div>
+  <h1>G Weather</h1>
+
+  <div class="search-row">
+    <input type="text" id="cityInput" placeholder="Search a city..." autocomplete="off" />
+    <button id="searchBtn">Search</button>
+  </div>
+  <button class="geo-link" id="geoBtn">↳ Use my current location</button>
+
+  <div class="card" id="card">
+    <div class="state-message" id="stateMessage">
+      Search for a city or use your location to see the current sky.
+    </div>
+
+    <div class="weather-display" id="weatherDisplay">
+      <div class="location-name" id="locationName">—</div>
+      <div class="location-meta" id="locationMeta">—</div>
+
+      <div class="temp-row">
+        <div class="icon-wrap" id="iconWrap"></div>
+        <div class="temp-num" id="tempNum">--<span>°</span></div>
+      </div>
+      <div class="condition-label" id="conditionLabel">—</div>
+
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="stat-label">Feels like</div>
+          <div class="stat-value" id="feelsLike">--°</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Humidity</div>
+          <div class="stat-value" id="humidity">--%</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Wind</div>
+          <div class="stat-value" id="wind">-- km/h</div>
+        </div>
+      </div>
+
+      <div class="unit-toggle">
+        <button id="unitC" class="active">°C</button>
+        <button id="unitF">°F</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>Data via OpenWeatherMap</footer>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
